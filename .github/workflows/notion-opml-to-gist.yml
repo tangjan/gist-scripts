@@ -1,0 +1,29 @@
+name: Update OPML to Gist
+
+on:
+  workflow_dispatch: 
+
+jobs:
+  update-gist:
+    runs-on: ubuntu-latest
+
+    env:
+      NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
+      OPML_GIST_ID: ${{ vars.OPML_GIST_ID }}
+      NOTION_VTUBERS_DATABASE_ID: ${{ vars.NOTION_VTUBERS_DATABASE_ID }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run update gist script
+        run: node src/scripts/update_github_gist_opml.js
