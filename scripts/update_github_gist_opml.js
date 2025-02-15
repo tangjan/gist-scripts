@@ -2,7 +2,7 @@ import { Octokit } from "@octokit/rest";
 import generateOpmlFromNotion from "./notion_database_youtube_url_to_opml.js";
 
 const octokit = new Octokit({
-  auth: process.env.GITHUB_TOKEN,
+  auth: process.env.TOKEN_OF_GITHUB,
 });
 
 // 更新 GitHub Gist 的 OPML 文件
