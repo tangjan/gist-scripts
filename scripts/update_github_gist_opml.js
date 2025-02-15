@@ -9,7 +9,7 @@ const octokit = new Octokit({
 async function updateGistOpml(opmlContent) {
   try {
     await octokit.rest.gists.update({
-      gist_id: process.env.GITHUB_GIST_ID,
+      gist_id: process.env.OPML_GIST_ID,
       files: {
         "youtube_vtubers_feeds.opml": {
           content: opmlContent,
