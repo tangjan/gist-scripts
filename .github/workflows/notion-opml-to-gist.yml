@@ -26,4 +26,4 @@ jobs:
         run: npm install
 
       - name: Run update gist script
-        run: node src/scripts/update_github_gist_opml.js
+        run: node scripts/update_github_gist_opml.js
