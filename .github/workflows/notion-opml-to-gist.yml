@@ -9,6 +9,7 @@ jobs:
 
     env:
       NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       OPML_GIST_ID: ${{ vars.OPML_GIST_ID }}
       NOTION_VTUBERS_DATABASE_ID: ${{ vars.NOTION_VTUBERS_DATABASE_ID }}
 
