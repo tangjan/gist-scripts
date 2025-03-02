@@ -1,0 +1,19 @@
+{
+  "name": "notion-database-url-to-opml",
+  "version": "1.0.0",
+  "main": "notion_fetch_url.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jan Tang",
+  "license": "MIT",
+  "dependencies": {
+    "@notionhq/client": "^2.2.15",
+    "@octokit/rest": "^21.1.0",
+    "axios": "^1.7.9",
+    "jsdom": "^26.0.0"
+  },
+  "devDependencies": {},
+  "description": ""
+}

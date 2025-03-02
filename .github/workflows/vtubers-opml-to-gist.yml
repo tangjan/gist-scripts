@@ -1,4 +1,4 @@
-name: Update OPML to Gist
+name: Update Vtubers OPML to Gist
 
 on:
   workflow_dispatch: 
@@ -8,10 +8,8 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
-      TOKEN_OF_GITHUB: ${{ secrets.TOKEN_OF_GITHUB }}
-      OPML_GIST_ID: ${{ vars.OPML_GIST_ID }}
-      NOTION_VTUBERS_DATABASE_ID: ${{ vars.NOTION_VTUBERS_DATABASE_ID }}
+      NOTION_VTUBERS_DATABASE_API_KEY: ${{ secrets.NOTION_VTUBERS_DATABASE_API_KEY }}
+      TOKEN_OF_GITHUB_GIST: ${{ secrets.TOKEN_OF_GITHUB_GIST }}
 
     steps:
       - name: Checkout repository
@@ -24,7 +22,7 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm install
+        run: npm install --prefix scripts/notion-database-youtube-url-to-opml
 
       - name: Run update gist script
-        run: node scripts/update_github_gist_opml.js
+        run: node scripts/notion-database-youtube-url-to-opml/index.js
