@@ -2,7 +2,7 @@ Various scripts to update my GitHub Gists.
 
 ### notion-database-youtube-url-to-opml
 
-Convert YouTube VTuber's URLs from [my Notion database](https://tangjiayan.notion.site/18fef38846658065afe3fcdfa307e553) to GitHub Gist: [youtube_vtubers_feeds.opml](https://gist.github.com/tangjan/186d3098cd847b22e9117306ab4d5161).
+Convert YouTube VTuber's URLs from [my Notion database](https://tangjiayan.notion.site/18fef38846658065afe3fcdfa307e553) to [youtube_vtubers_feeds.opml](https://gist.github.com/tangjan/186d3098cd847b22e9117306ab4d5161).
 
 ### Anime-Girls-Holding-Programming-Books-710px-width-to-json
 
