@@ -25,4 +25,4 @@ jobs:
         run: npm install --prefix scripts/notion-database-youtube-url-to-opml
 
       - name: Run update gist script
-        run: node scripts/notion-database-youtube-url-to-opml/index.js
+        run: node scripts/notion-database-youtube-url-to-opml/script/index.js
