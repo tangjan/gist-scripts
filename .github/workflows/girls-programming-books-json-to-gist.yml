@@ -1,0 +1,28 @@
+name: Update Anime-Girls-Holding-Programming-Books-710px-width.json to Gist
+
+on:
+  workflow_dispatch: 
+
+jobs:
+  update-gist:
+    runs-on: ubuntu-latest
+
+    env:
+      TOKEN_OF_GITHUB_GIST: ${{ secrets.TOKEN_OF_GITHUB_GIST }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: 'scripts/Anime-Girls-Holding-Programming-Books-710px-width-to-json/package-lock.json'
+
+      - name: Install dependencies
+        run: npm install --prefix scripts/Anime-Girls-Holding-Programming-Books-710px-width-to-json
+
+      - name: Run update gist script
+        run: node scripts/Anime-Girls-Holding-Programming-Books-710px-width-to-json/index.js
